@@ -1,21 +1,21 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
 }
 
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
 
-    compileSdkVersion globalConfiguration["compileSDK"]
+    compileSdkVersion 30
 
     defaultConfig {
-        applicationId "br.com.fernandodeveloper.events"
         minSdkVersion globalConfiguration["minSDK"]
         targetSdkVersion globalConfiguration["targetSDK"]
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -34,31 +34,20 @@ android {
 }
 
 dependencies {
-
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 
     implementation dependencies.kotlin
     implementation dependencies.ktx
-    implementation dependencies.kotlinCoroutines
-    implementation dependencies.appCompact
 
-    implementation dependencies.materialDesign
-    implementation dependencies.constraintlayout
     implementation dependencies.lifeCycle
     implementation dependencies.viewModel
 
     implementation dependencies.koin
 
-    implementation dependencies.gson
-    implementation dependencies.okhttp
-    implementation dependencies.retrofit
-    implementation dependencies.retrofitRxAdapter
-    implementation dependencies.retrofitGsonConverter
-
-
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.runner
     androidTestImplementation testDependencies.espresso
+
 
 }
