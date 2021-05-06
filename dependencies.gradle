@@ -1,0 +1,100 @@
+ext {
+
+    //Android Config
+    minSDK = 21
+    targetSDK = 30
+    compileSDK = 30
+
+    appCompactVersion = '1.2.0'
+    materialDesignVersion = '1.3.0'
+    kotlinVersion = '1.5.0'
+    kotlinCoroutinesVersion = '1.4.1'
+
+    AndroidArchVersion = '1.1.1'
+    databindingVersion = '3.1.4'
+    lifeCycleVersion = '2.3.1'
+    ktxVersion = '1.5.0-beta02'
+    navigationVersion = '1.0.0'
+
+    constrainVersion = '2.0.4'
+    cardViewVersion = '1.0.0'
+    recyclerViewVersion = '1.0.0'
+
+
+    //Rx
+    rxJavaVersion = '2.2.7'
+    rxKotlinVersion = '2.2.0'
+    rxAndroidVersion = '2.1.1'
+
+    //Koin
+    koinVersion = '3.0.1'
+
+    //Retrofit
+    retrofitVersion = '2.9.0'
+
+    okHttpVersion = '4.9.1'
+    //Gson
+    gsonVersion = '2.8.6'
+
+    //Room version
+    roomVersion = '2.3.0-alpha02'
+
+    //Test
+    junitVersion = '4.13.2'
+    espressoVersion = '3.3.0'
+    runnerVersion = '1.3.0'
+
+
+    FastAdapterVersion = '4.1.2'
+
+
+    dependencies = [
+            kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            kotlinCoroutines     : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion",
+
+            appCompact           : "androidx.appcompat:appcompat:$appCompactVersion",
+            materialDesign       : "com.google.android.material:material:$materialDesignVersion",
+            constraintlayout     : "androidx.constraintlayout:constraintlayout:$constrainVersion",
+            cardView             : "androidx.cardview:cardview:$cardViewVersion",
+            recyclerView         : "androidx.recyclerview:recyclerview:$recyclerViewVersion",
+
+            viewModel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifeCycleVersion",
+            lifeCycle            : "android.arch.lifecycle:extensions:$AndroidArchVersion",
+
+            navigationFragment   : "android.arch.navigation:navigation-fragment-ktx:$navigationVersion",
+            navigationUi         : "android.arch.navigation:navigation-ui-ktx:$navigationVersion",
+
+            dataBinding          : "com.android.databinding:compiler:$databindingVersion",
+
+            ktx                  : "androidx.core:core-ktx:$ktxVersion",
+
+            rxJava               : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxKotlin             : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid            : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+
+            koin                 : "io.insert-koin:koin-android:$koinVersion",
+            koinExt              : "io.insert-koin:koin-android-ext:$koinVersion",
+            koinJetPackWorkMager : "io.insert-koin:koin-androidx-workmanager:$koinVersion",
+
+            okhttp               : "com.squareup.okhttp3:okhttp:$okHttpVersion",
+            retrofit             : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+            retrofitRxAdapter    : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+
+            gson                 : "com.google.code.gson:gson:$gsonVersion",
+
+            room                 : "androidx.room:room-runtime:$roomVersion",
+            roomRxJava           : "androidx.room:room-rxjava2:$roomVersion",
+            roomCompiler         : "androidx.room:room-compiler:$roomVersion",
+
+
+
+            fastAdapter          : "com.mikepenz:fastadapter:${FastAdapterVersion}"
+    ]
+
+    testDependecies = [
+            junit   : "junit:junit:$junitVersion",
+            espresso: "androidx.test.espresso:espresso-core:$espressoVersion",
+            runner  : "androidx.test:runner:$runnerVersion"
+    ]
+}
