@@ -2,3 +2,4 @@ rootProject.name = "Events"
 include ':app'
 include ':presentation'
 include ':data'
+include ':domain'

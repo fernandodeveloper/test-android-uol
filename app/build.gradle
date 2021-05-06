@@ -38,6 +38,10 @@ dependencies {
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 
+    implementation project(":data")
+    implementation project(":domain")
+    implementation project(":presentation")
+
     implementation dependencies.kotlin
     implementation dependencies.ktx
     implementation dependencies.kotlinCoroutines

@@ -1,6 +1,10 @@
 package br.com.fernandodeveloper.events
 
 import android.app.Application
+import br.com.fernandodeveloper.data.di.dataModule
+import br.com.fernandodeveloper.domain.di.domainModule
+import br.com.fernandodeveloper.events.di.aplicationModule
+import br.com.fernandodeveloper.presentation.di.presentationModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -18,7 +22,10 @@ class EventsApplication : Application() {
         startKoin {
             androidContext(this@EventsApplication)
             modules(
-                //TODO ADD MODULES
+                aplicationModule,
+                dataModule,
+                domainModule,
+                presentationModule
             )
         }
     }

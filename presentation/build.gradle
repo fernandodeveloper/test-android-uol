@@ -37,6 +37,8 @@ dependencies {
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 
+    implementation project(":domain")
+
     implementation dependencies.kotlin
     implementation dependencies.ktx
 
