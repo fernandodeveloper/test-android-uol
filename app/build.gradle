@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -31,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -53,13 +57,8 @@ dependencies {
     implementation dependencies.viewModel
 
     implementation dependencies.koin
-
-    implementation dependencies.gson
-    implementation dependencies.okhttp
-    implementation dependencies.retrofit
-    implementation dependencies.retrofitRxAdapter
-    implementation dependencies.retrofitGsonConverter
-
+    implementation dependencies.glide
+    annotationProcessor dependencies.glideAnnotation
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.runner

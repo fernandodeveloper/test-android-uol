@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiBase {
 
-    const val API_URL = "https://5f5a8f24d44d640016169133.mockapi.io/"
+    const val API_URL = "https://5f5a8f24d44d640016169133.mockapi.io/api/"
 
     fun provideHttpClient(): OkHttpClient =
         OkHttpClient.Builder()
@@ -15,7 +15,6 @@ object ApiBase {
             .followSslRedirects(true)
             .readTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(30, TimeUnit.SECONDS).build()
-
 
     inline fun <reified T> createWebService(okHttpClient: OkHttpClient): T =
         Retrofit.Builder()

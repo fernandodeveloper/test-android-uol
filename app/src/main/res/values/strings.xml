@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Events</string>
+    <string name="txt_event_listing_title">Eventos</string>
+    <string name="txt_no_internet">No internet</string>
+    <string name="txt_something_went_wrong">Algo errado</string>
+    <string name="txt_ops">Ops</string>
+    <string name="btn_close">Fechar</string>
+    <string name="cd_close">Fechar</string>
+    <string name="cd_image_event">d</string>
 </resources>
