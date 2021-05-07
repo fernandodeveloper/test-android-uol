@@ -48,7 +48,11 @@ dependencies {
 
     implementation dependencies.koin
 
-
+    implementation dependencies.gson
+    implementation dependencies.okhttp
+    implementation dependencies.retrofit
+    implementation dependencies.retrofitRxAdapter
+    implementation dependencies.retrofitGsonConverter
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.runner
