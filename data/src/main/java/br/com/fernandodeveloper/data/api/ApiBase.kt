@@ -11,6 +11,8 @@ object ApiBase {
 
     fun provideHttpClient(): OkHttpClient =
         OkHttpClient.Builder()
+            .followRedirects(true)
+            .followSslRedirects(true)
             .readTimeout(30, TimeUnit.SECONDS)
             .connectTimeout(30, TimeUnit.SECONDS).build()
 
