@@ -1,11 +1,12 @@
-package br.com.fernandodeveloper.events
+package br.com.fernandodeveloper.events.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.fernandodeveloper.events.R
 
-class MainActivity : AppCompatActivity() {
+class EventsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_events)
     }
 }
