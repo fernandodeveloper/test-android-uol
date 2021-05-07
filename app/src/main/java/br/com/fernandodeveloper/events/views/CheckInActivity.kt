@@ -9,7 +9,7 @@ import br.com.fernandodeveloper.domain.model.CheckInRequestBody
 import br.com.fernandodeveloper.events.R
 import br.com.fernandodeveloper.events.databinding.ActivityCheckInBinding
 import br.com.fernandodeveloper.events.extensions.createsErrorDialog
-import br.com.fernandodeveloper.presentation.br.com.fernandodeveloper.presentation.feature.checkin.CheckInViewModel
+import br.com.fernandodeveloper.presentation.feature.checkin.CheckInViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CheckInActivity : AppCompatActivity() {

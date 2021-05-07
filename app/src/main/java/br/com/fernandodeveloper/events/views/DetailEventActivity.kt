@@ -11,7 +11,7 @@ import br.com.fernandodeveloper.events.databinding.ActivityDetailEventBinding
 import br.com.fernandodeveloper.events.extensions.createsErrorDialog
 import br.com.fernandodeveloper.events.extensions.createsLoadingDialog
 import br.com.fernandodeveloper.events.views.EventsActivity.Companion.EVENT_ID
-import br.com.fernandodeveloper.presentation.br.com.fernandodeveloper.presentation.feature.events.viewmodel.DetailEventViewModel
+import br.com.fernandodeveloper.presentation.feature.events.viewmodel.DetailEventViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetailEventActivity : AppCompatActivity() {
