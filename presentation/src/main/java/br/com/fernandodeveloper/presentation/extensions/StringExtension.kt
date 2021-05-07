@@ -1,4 +1,4 @@
-package viewmodel
+package br.com.fernandodeveloper.presentation.extensions
 
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols

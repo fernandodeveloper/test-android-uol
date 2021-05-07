@@ -1,6 +1,8 @@
-package viewmodel
+package br.com.fernandodeveloper.presentation.feature.events.model
 
 import br.com.fernandodeveloper.domain.model.EventResponseBodyItem
+import br.com.fernandodeveloper.presentation.extensions.formatarMoeda
+import br.com.fernandodeveloper.presentation.extensions.toDateBR
 
 fun EventResponseBodyItem.toPresentationEventItem() =
     EventItem(
@@ -10,7 +12,7 @@ fun EventResponseBodyItem.toPresentationEventItem() =
         image = image,
         latitude = "$LATITUDE$latitude",
         longitude = "$LONGITUDE$longitude",
-        price = "${DESC_PRICE} ${price.formatarMoeda()}",
+        price = "$DESC_PRICE ${price.formatarMoeda()}",
         title = title,
         contentToBeShare = createContentToBeShare()
     )
@@ -24,7 +26,7 @@ fun List<EventResponseBodyItem>.toPresentationEventItemList() =
             image = it.image,
             latitude = it.latitude.toString(),
             longitude = it.longitude.toString(),
-            price = "${DESC_PRICE} ${it.price.formatarMoeda()}",
+            price = "$DESC_PRICE ${it.price.formatarMoeda()}",
             title = it.title,
             contentToBeShare = it.createContentToBeShare()
         )

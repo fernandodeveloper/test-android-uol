@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="iv_event" type="id" />
+    <item name="btn_cancel" type="id" />
+    <item name="txt_name_error" type="id" />
+    <item name="btn_make_check_in" type="id" />
+    <item name="til_name" type="id" />
+    <item name="tiet_name" type="id" />
+    <item name="txt_email_error" type="id" />
+    <item name="til_email" type="id" />
+    <item name="tiet_email" type="id" />
+    <item name="txt_check_in_title" type="id" />
 </resources>

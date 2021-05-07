@@ -1,4 +1,4 @@
-package viewmodel
+package br.com.fernandodeveloper.presentation.br.com.fernandodeveloper.presentation.core
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

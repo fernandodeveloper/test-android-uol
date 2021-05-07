@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.fernandodeveloper.events.databinding.ItemEventoBinding
-import viewmodel.EventItem
+import br.com.fernandodeveloper.presentation.feature.events.model.EventItem
 
 class ListEventsAdapter(
     private val listEventsListener: ListEventsListener

@@ -7,7 +7,7 @@
 
         <variable
             name="eventItem"
-            type="viewmodel.EventItem" />
+            type="br.com.fernandodeveloper.presentation.feature.events.model.EventItem" />
 
         <variable
             name="listEventsListener"

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty_name_message">Digite o seu nome.</string>
+    <string name="empty_email_message">Digite o email.</string>
+    <string name="invalid_email_message">Ops email inválido.</string>
+</resources>

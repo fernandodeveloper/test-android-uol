@@ -1,4 +1,4 @@
-package viewmodel
+package br.com.fernandodeveloper.presentation.feature.events.model
 
 data class EventItem(
     val date: String,

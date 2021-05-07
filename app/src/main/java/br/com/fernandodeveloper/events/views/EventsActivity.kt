@@ -9,8 +9,8 @@ import br.com.fernandodeveloper.events.adapters.ListEventsAdapter
 import br.com.fernandodeveloper.events.databinding.ActivityEventsBinding
 import br.com.fernandodeveloper.events.extensions.createsErrorDialog
 import br.com.fernandodeveloper.events.extensions.createsLoadingDialog
+import br.com.fernandodeveloper.presentation.feature.events.viewmodel.ListEventViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import viewmodel.ListEventViewModel
 
 class EventsActivity : AppCompatActivity() {
 
@@ -23,7 +23,7 @@ class EventsActivity : AppCompatActivity() {
     private val listEventsAdapter: ListEventsAdapter by lazy {
         ListEventsAdapter(object : ListEventsAdapter.ListEventsListener {
             override fun seeDetail(id: String) {
-                val intent = Intent(this@EventsActivity, EventsActivity::class.java)
+                val intent = Intent(this@EventsActivity, DetailEventActivity::class.java)
                 intent.putExtra(EVENT_ID, id)
                 startActivity(intent)
             }

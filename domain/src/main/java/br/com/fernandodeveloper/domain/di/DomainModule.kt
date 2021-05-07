@@ -14,6 +14,12 @@ val domainModule = module {
     }
 
     factory {
+        DetailEventUseCase(
+            eventsRepository = get()
+        )
+    }
+
+    factory {
         ListEventUseCase(
             eventsRepository = get()
         )
