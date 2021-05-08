@@ -9,8 +9,8 @@ android {
     compileSdkVersion globalConfiguration["compileSDK"]
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdkVersion globalConfiguration["minSDK"]
+        targetSdkVersion globalConfiguration["targetSDK"]
         versionCode 1
         versionName "1.0"
 

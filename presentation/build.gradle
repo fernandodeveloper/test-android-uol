@@ -6,7 +6,7 @@ plugins {
 android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
 
-    compileSdkVersion 30
+    compileSdkVersion globalConfiguration["compileSDK"]
 
     defaultConfig {
         minSdkVersion globalConfiguration["minSDK"]
