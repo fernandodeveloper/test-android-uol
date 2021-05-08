@@ -6,15 +6,12 @@
     <string name="txt_ops">Ops</string>
     <string name="btn_close">Fechar</string>
     <string name="cd_close">Fechar</string>
-    <string name="cd_image_event">d</string>
-    <string name="btn_share">Compartilhar</string>
     <string name="btn_check_in">Check-in</string>
     <string name="btn_cancel">Cancelar</string>
     <string name="hint_name">Nome</string>
     <string name="hint_email">Email</string>
     <string name="txt_check_in_title">Check-in2</string>
     <string name="success_check_in_message">sucesso</string>
-    <string name="activity_event_detail_title">Sobre o evento</string>
 
     <string name="btn_maps">Endereço</string>
     <string name="about_event">Sobre o Evento</string>
