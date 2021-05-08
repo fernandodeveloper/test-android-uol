@@ -34,11 +34,14 @@ android {
     }
     buildFeatures {
         dataBinding = true
+        viewBinding true
     }
 }
 
 dependencies {
 
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     def dependencies = rootProject.ext.dependencies
     def testDependencies = rootProject.ext.testDependecies
 

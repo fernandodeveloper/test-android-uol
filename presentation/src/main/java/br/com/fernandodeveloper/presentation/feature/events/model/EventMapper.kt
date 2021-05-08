@@ -36,5 +36,5 @@ fun EventResponseBodyItem.createContentToBeShare() =
     title + "\n" + description + "\n" + date.toDateBR() + "\n" + "$DESC_PRICE$price"
 
 private const val DESC_PRICE = "Valor "
-private const val LATITUDE = "Lat: "
-private const val LONGITUDE = "Long: "
+public const val LATITUDE = "Lat: "
+public const val LONGITUDE = "Long: "

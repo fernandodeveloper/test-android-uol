@@ -23,7 +23,7 @@ class EventsActivity : AppCompatActivity() {
     private val listEventsAdapter: ListEventsAdapter by lazy {
         ListEventsAdapter(object : ListEventsAdapter.ListEventsListener {
             override fun seeDetail(id: String) {
-                val intent = Intent(this@EventsActivity, DetailEventActivity::class.java)
+                val intent = Intent(this@EventsActivity, ScrollingActivity::class.java)
                 intent.putExtra(EVENT_ID, id)
                 startActivity(intent)
             }

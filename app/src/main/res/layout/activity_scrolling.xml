@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="eventItem"
+            type="br.com.fernandodeveloper.presentation.feature.events.model.EventItem" />
+
+        <variable
+            name="checkInListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="shareListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="mapsListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".views.ScrollingActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_bar_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/Theme.Events.AppBarOverlay">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar">
+
+                <ImageView
+                    android:id="@+id/header"
+                    loadImage="@{eventItem.image}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/Theme.Events.PopupOverlay" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txt_detail_event_name"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{eventItem.title}"
+                    app:layout_constraintBottom_toTopOf="@id/txt_detail_event_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_detail_event_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{eventItem.description}"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/txt_detail_event_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_detail_event_name" />
+
+                <TextView
+                    android:id="@+id/txt_detail_event_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{eventItem.date}"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/txt_detail_event_latitude"
+                    app:layout_constraintEnd_toStartOf="@id/txt_detail_event_price"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_detail_event_description" />
+
+                <TextView
+                    android:id="@+id/txt_detail_event_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{eventItem.price}"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_detail_event_date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_detail_event_date"
+                    app:layout_constraintTop_toTopOf="@id/txt_detail_event_date" />
+
+                <TextView
+                    android:id="@+id/txt_detail_event_latitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{eventItem.latitude}"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toTopOf="@id/btn_check_in"
+                    app:layout_constraintEnd_toStartOf="@id/txt_detail_event_longitude"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_detail_event_date" />
+
+                <TextView
+                    android:id="@+id/txt_detail_event_longitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{eventItem.longitude}"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_detail_event_latitude"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txt_detail_event_latitude"
+                    app:layout_constraintTop_toTopOf="@id/txt_detail_event_latitude" />
+
+
+                <Button
+                    android:id="@+id/btn_check_in"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/shape_button"
+                    android:drawableStart="@drawable/ic_baseline_check_circle_outline_24"
+                    android:onClick="@{checkInListener}"
+                    android:text="@string/btn_check_in"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btn_maps"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_detail_event_latitude" />
+
+                <Button
+                    android:id="@+id/btn_maps"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/shape_button"
+                    android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                    android:onClick="@{mapsListener}"
+                    android:text="@string/btn_maps"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_check_in"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_check_in"
+                    app:layout_constraintTop_toTopOf="@id/btn_check_in" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:onClick="@{shareListener}"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
