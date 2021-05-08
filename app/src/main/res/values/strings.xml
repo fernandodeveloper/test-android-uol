@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Events</string>
     <string name="txt_event_listing_title">Eventos</string>
-    <string name="txt_no_internet">No internet</string>
-    <string name="txt_something_went_wrong">Algo errado</string>
+    <string name="txt_no_internet">Sem conexão com a internet</string>
+    <string name="txt_something_went_wrong">Houve uma falha inesperada, tente novamente mais tarde.</string>
     <string name="txt_ops">Ops</string>
     <string name="btn_close">Fechar</string>
     <string name="cd_close">Fechar</string>
@@ -10,9 +10,11 @@
     <string name="btn_cancel">Cancelar</string>
     <string name="hint_name">Nome</string>
     <string name="hint_email">Email</string>
-    <string name="txt_check_in_title">Check-in2</string>
-    <string name="success_check_in_message">sucesso</string>
+    <string name="txt_check_in_title">Efetue o check-in</string>
+    <string name="success_check_in_message">Check-in realizado!</string>
 
     <string name="btn_maps">Endereço</string>
     <string name="about_event">Sobre o Evento</string>
+    <string name="txt_success">Sucesso!</string>
+    <string name="btn_confirm">Confirmar</string>
 </resources>

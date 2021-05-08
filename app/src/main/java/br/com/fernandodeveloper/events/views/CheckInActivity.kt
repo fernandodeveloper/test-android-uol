@@ -2,13 +2,13 @@ package br.com.fernandodeveloper.events.views
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import br.com.fernandodeveloper.domain.model.CheckInRequestBody
 import br.com.fernandodeveloper.events.R
 import br.com.fernandodeveloper.events.databinding.ActivityCheckInBinding
 import br.com.fernandodeveloper.events.extensions.createsErrorDialog
+import br.com.fernandodeveloper.events.extensions.createsSuccessDialog
 import br.com.fernandodeveloper.presentation.feature.checkin.CheckInViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -62,11 +62,7 @@ class CheckInActivity : AppCompatActivity() {
         })
 
         viewModel.success.observe(this, {
-            Toast.makeText(
-                this,
-                getString(R.string.success_check_in_message),
-                Toast.LENGTH_LONG
-            ).show()
+            createsSuccessDialog(R.string.success_check_in_message)
         })
 
     }
