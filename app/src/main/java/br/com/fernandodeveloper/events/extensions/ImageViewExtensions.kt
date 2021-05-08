@@ -8,9 +8,9 @@ fun ImageView.loadImage(url: String?) {
     if (!url.isNullOrBlank()) {
         Glide.with(this)
             .load(url)
-            .error(R.drawable.error_image_generic)
+            .error(R.drawable.no_image_available)
             .into(this)
     } else {
-        this.setImageResource(R.drawable.error_image_generic)
+        this.setImageResource(R.drawable.no_image_available)
     }
 }

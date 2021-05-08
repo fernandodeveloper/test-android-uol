@@ -1,4 +1,4 @@
-package br.com.fernandodeveloper.events.views
+package br.com.fernandodeveloper.events.views.feature.splash
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import br.com.fernandodeveloper.events.R
+import br.com.fernandodeveloper.events.views.feature.eventos.EventsActivity
 
 class SplashActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package br.com.fernandodeveloper.events.views
+package br.com.fernandodeveloper.events.views.feature.eventos
 
 import android.content.Intent
 import android.graphics.Color
@@ -14,12 +14,13 @@ import br.com.fernandodeveloper.events.R
 import br.com.fernandodeveloper.events.databinding.ActivityScrollingBinding
 import br.com.fernandodeveloper.events.extensions.createsErrorDialog
 import br.com.fernandodeveloper.events.extensions.createsLoadingDialog
+import br.com.fernandodeveloper.events.views.feature.checkin.CheckInActivity
 import br.com.fernandodeveloper.presentation.feature.events.model.LATITUDE
 import br.com.fernandodeveloper.presentation.feature.events.model.LONGITUDE
 import br.com.fernandodeveloper.presentation.feature.events.viewmodel.DetailEventViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ScrollingActivity : AppCompatActivity() {
+class EventDetailsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityScrollingBinding
     private val viewModel by viewModel<DetailEventViewModel>()

@@ -1,4 +1,4 @@
-package br.com.fernandodeveloper.events.views
+package br.com.fernandodeveloper.events.views.feature.checkin
 
 import android.os.Bundle
 import android.view.View
@@ -9,6 +9,7 @@ import br.com.fernandodeveloper.events.R
 import br.com.fernandodeveloper.events.databinding.ActivityCheckInBinding
 import br.com.fernandodeveloper.events.extensions.createsErrorDialog
 import br.com.fernandodeveloper.events.extensions.createsSuccessDialog
+import br.com.fernandodeveloper.events.views.feature.eventos.EventsActivity
 import br.com.fernandodeveloper.presentation.feature.checkin.CheckInViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

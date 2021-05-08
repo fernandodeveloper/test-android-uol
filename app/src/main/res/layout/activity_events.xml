@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp"
-        tools:context=".views.EventsActivity">
+        tools:context=".views.feature.eventos.EventsActivity">
 
         <TextView
             android:id="@+id/txt_title"

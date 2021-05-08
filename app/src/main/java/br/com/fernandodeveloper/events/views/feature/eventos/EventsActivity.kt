@@ -1,4 +1,4 @@
-package br.com.fernandodeveloper.events.views
+package br.com.fernandodeveloper.events.views.feature.eventos
 
 import android.content.Intent
 import android.os.Bundle
@@ -23,7 +23,7 @@ class EventsActivity : AppCompatActivity() {
     private val listEventsAdapter: ListEventsAdapter by lazy {
         ListEventsAdapter(object : ListEventsAdapter.ListEventsListener {
             override fun seeDetail(id: String) {
-                val intent = Intent(this@EventsActivity, ScrollingActivity::class.java)
+                val intent = Intent(this@EventsActivity, EventDetailsActivity::class.java)
                 intent.putExtra(EVENT_ID, id)
                 startActivity(intent)
             }
